@@ -16,7 +16,7 @@ namespace IdentityModel.UnitTests
 
             var response = new AuthorizeResponse(url);
 
-            response.IsError.Should().BeFalse();
+            response.IsError.Should().BeTrue();
             response.Error.Should().Be("foo");
         }
 
