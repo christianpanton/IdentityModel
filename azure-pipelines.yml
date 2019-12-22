@@ -37,11 +37,9 @@ jobs:
     inputs:
       packageType: 'sdk'
       useGlobalJson: true
-  - task: PowerShell@2
-    displayName: 'Build Script'
+  - task: BatchScript@1
     inputs:
-      targetType: filePath
-      filePath: ./build.ps1  
+      filename: './build.cmd'
   - task: NuGetCommand@2
     displayName: 'Push package to Github'
     inputs:
