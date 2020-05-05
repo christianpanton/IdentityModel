@@ -1,6 +1,9 @@
 ﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
+using System.Collections;
+using System.Collections.Generic;
+
 namespace IdentityModel.Client
 {
     /// <summary>
@@ -94,6 +97,14 @@ namespace IdentityModel.Client
         public string Code { get; set; }
 
         /// <summary>
+        /// Gets or sets the resource(s).
+        /// </summary>
+        /// <value>
+        /// The code.
+        /// </value>
+        public ICollection<string> Resource { get; set; } = new HashSet<string>();
+
+        /// <summary>
         /// Gets or sets the redirect URI.
         /// </summary>
         /// <value>
@@ -131,6 +142,14 @@ namespace IdentityModel.Client
         /// The scope.
         /// </value>
         public string Scope { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the resource(s).
+        /// </summary>
+        /// <value>
+        /// The code.
+        /// </value>
+        public ICollection<string> Resource { get; set; } = new HashSet<string>();
     }
     
     /// <summary>
